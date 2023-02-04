@@ -1,7 +1,7 @@
 # TVbox
 简约个人主页、自适应  
 [预览](https://missyao.ml/)
-![alt 预览图](http://rj5s4vapr.sabkt.gdipper.com/WechatIMG5.png)
+![alt 预览图](WechatIMG5.png)
 
 ## 简介
 一代神器猫影视,由于传播广泛,有些唯利是图之人上架至第三方平台售卖,
