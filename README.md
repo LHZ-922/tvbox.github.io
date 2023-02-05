@@ -17,5 +17,5 @@ https://github.com/CatVodTVOfficial/TVBoxOSC
 
 ## 使用方法
 这还要看嘛？
-
+直播需要支持IPV6
 </html>
