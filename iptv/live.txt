@@ -56,13 +56,7 @@ CCTV-4K,http://[2409:8087:3408:20:5040::106]:18890/PLTV/88888888/224/3221226998/
 
 港澳台频道,#genre#
 凤凰资讯,http://[2409:8087:3869:8021:1001::e5]:6610/ysten-businessmobile/live/fhzixun/index.m3u8
-凤凰资讯,http://[2409:8087:3408:20:5040::106]:18890/PLTV/88888888/224/3221227226/index.m3u8
-凤凰资讯,http://play-live.ifeng.com/live/06OLEEWQKN4.m3u8
-凤凰中文,http://[2409:8087:3428:20:500::100f]:6610/PLTV/88888888/224/3221227222/index.m3u8?servicetype=1
 凤凰中文,http://[2409:8087:3869:8021:1001::e5]:6610/ysten-businessmobile/live/fhchinese/index.m3u8
-凤凰中文,http://play-live.ifeng.com/live/06OLEGEGM4G.m3u8
-凤凰中文,http://[2409:8087:3869:8021:1001::e5]:6610/ysten-businessmobile/live/fhchinese/index.m3u8
-凤凰中文,http://[2409:8087:3408:20:5040::106]:18890/PLTV/88888888/224/3221227222/index.m3u8
 翡翠台,http://xtv:1292@23.142.200.188:9981/stream/channelid/963328714?ticket=34BD5D1F580B74FCDDFF76B7932A77AAED7ABA82&profile=pass
 无线新闻台,http://xtv:1292@23.142.200.188:9981/stream/channelid/213479573?ticket=6A022149D7BCE86537455AC34B66D1876C1F8BF8&profile=pass
 无线财经,http://120.84.96.74:808/hls/86/index.m3u8
