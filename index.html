@@ -959,15 +959,14 @@
       "changeable": 0,
       "ext": "https://drpy.cainisi.cf/js/310直播.js"
     },
-    {
-      "key": "push_agent",
-      "name": "推送┃链接",
+   {
+      "key": "说明4",
+      "name": "请勿相信视频中任何广告",
       "type": 3,
-      "api": "csp_Push",
-      "searchable": 1,
-      "changeable": 0,
-      "jar": "https://tvbox.cainisi.cf/jar/fm1221.jar;md5;55c157414346e3ff571baad0a223bf15"
-    },
+      "api": "csp_XPath",
+      "searchable": 0,
+      "changeable": 0
+    }
   ],
   "parses": [
     {
@@ -1108,29 +1107,29 @@
       ]
     },
     {
-      "name": "农民嗅探",
-      “主机”：[
-        “头条网”
+      "name": "農民嗅探",
+      "hosts": [
+        "toutiaovod.com"
       ],
-      “正则表达式”：[
-        “视频/tos/cn”
+      "regex": [
+        "video/tos/cn"
       ]
     }
   ],
-  “多”：[
+  "doh": [
     {
-      “名称”：“谷歌”，
-      “url”：“https://dns.google/dns-query”，
-      “ips”：[
-        “8.8.4.4”，
-        “8.8.8.8”
+      "name": "Google",
+      "url": "https://dns.google/dns-query",
+      "ips": [
+        "8.8.4.4",
+        "8.8.8.8"
       ]
     },
     {
-      “名称”：“Cloudflare”，
-      “url”：“https://cloudflare-dns.com/dns-query”，
-      “ips”：[
-        “1.1.1.1”，
+      "name": "Cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query",
+      "ips": [
+        "1.1.1.1",
         “1.0.0.1”，
         “2606:4700:4700::1111”,
         “2606:4700:4700::1001”
