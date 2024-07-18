@@ -1,4 +1,4 @@
-BASE_DIR=/volume1/docker/xiaoya
+BASE_DIR=/home/xiaoya
 PORT1=4567
 PORT2=5678
 PORT3=5345
@@ -10,7 +10,7 @@ MOUNT=""
 
 usage(){
   echo "Usage: $0 [ -d BASE_DIR ] [ -p PORT1 ] [ -P PORT2 ] [ -t TAG ] [ -v MOUNT ] [ -u ] [ -l ]"
-  echo "-d BASE_DIR    数据目录，默认：/volume1/docker/xiaoya"
+  echo "-d BASE_DIR    数据目录，默认：/home/xiaoya"
   echo "-p PORT1       管理界面端口，默认：4567"
   echo "-P PORT2       小雅AList端口，默认：5678"
   echo "-t TAG         Docker镜像标签，默认：latest"
