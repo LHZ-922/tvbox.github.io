@@ -1,4 +1,4 @@
-BASE_DIR=/home/xiaoya
+BASE_DIR=/volume1/docker/xiaoya
 PORT1=4567
 PORT2=5678
 PORT3=5345
@@ -10,7 +10,7 @@ MOUNT=""
 
 usage(){
   echo "Usage: $0 [ -d BASE_DIR ] [ -p PORT1 ] [ -P PORT2 ] [ -t TAG ] [ -v MOUNT ] [ -u ] [ -l ]"
-  echo "-d BASE_DIR    数据目录，默认：/home/xiaoya"
+  echo "-d BASE_DIR    数据目录，默认：/volume1/docker/xiaoya"
   echo "-p PORT1       管理界面端口，默认：4567"
   echo "-P PORT2       小雅AList端口，默认：5678"
   echo "-t TAG         Docker镜像标签，默认：latest"
@@ -59,15 +59,15 @@ echo "bridge ${*}" > "$HOME/.config/atv/cmd"
 
 shift $((OPTIND-1))
 
-if [ $# -gt 0 ]; then
+if [ $# -gt 0 ]; 键，然后
 	BASE_DIR=$1
 fi
 
-if [ $# -gt 1 ]; then
+if [ $# -gt 1 ]; 键，然后
 	PORT1=$2
 fi
 
-if [ $# -gt 2 ]; then
+if [ $# -gt 2 ]; 键，然后
 	PORT2=$3
 fi
 
@@ -86,7 +86,7 @@ echo -e "\e[33m默认端口变更为4567\e[0m"
 mkdir -p $BASE_DIR
 
 if ! grep "access.mypikpak.com" /etc/hosts >/dev/null
-then
+键，然后
 	echo -e "127.0.0.1\taccess.mypikpak.com" >> /etc/hosts
 fi
 
@@ -96,10 +96,10 @@ docker volume prune -f --filter "label=MAINTAINER=Har01d"
 
 platform="linux/amd64"
 ARCH=$(uname -m)
-if [ "$ARCH" = "armv7l" ]; then
+if [ "$ARCH" = "armv7l" ]; 键，然后
   echo "不支持的平台"
   exit 1
-elif [ "$ARCH" = "aarch64" ]; then
+elif [ "$ARCH" = "aarch64" ]; 键，然后
     platform="linux/arm64"
 fi
 
@@ -111,14 +111,14 @@ do
 done
 
 NEW_IMAGE=$(docker images -q haroldli/xiaoya-tvbox:${TAG})
-if [ "$UPDATE" = "true" ] && [ "$IMAGE_ID" = "$NEW_IMAGE" ]; then
+if [ "$UPDATE" = "true" ] && [ "$IMAGE_ID" = "$NEW_IMAGE" ]; 键，然后
   echo -e "\e[33m镜像没有更新\e[0m"
   exit
 fi
 
 echo -e "\e[33m重启应用\e[0m"
 docker rm -f xiaoya-tvbox 2>/dev/null
-if [ "$NET" = "" ]; then
+if [ "$NET" = "" ]; 键，然后
   docker run -d -p $PORT1:4567 -p $PORT2:80 -e ALIST_PORT=$PORT2 -v "$BASE_DIR":/data $MOUNT --restart=always --name=xiaoya-tvbox haroldli/xiaoya-tvbox:${TAG}
 else
   docker run -d $NET -v "$BASE_DIR":/data $MOUNT --restart=always --name=xiaoya-tvbox haroldli/xiaoya-tvbox:${TAG}
@@ -128,14 +128,14 @@ echo -e "\n\e[32m请使用以下命令查看日志输出：\e[0m"
 echo -e "    docker logs -f xiaoya-tvbox\n"
 
 IP=$(ip a | grep -F '192.168.' | awk '{print $2}' | awk -F/ '{print $1}' | head -1)
-if [ -n "$IP" ]; then
+if [ -n "$IP" ]; 键，然后
   echo ""
   echo -e "\e[32m请用以下地址访问：\e[0m"
   echo -e "    \e[32m管理界面\e[0m： http://$IP:$PORT1/"
   echo -e "    \e[32m小雅AList\e[0m： http://$IP:$PORT2/"
 else
   IP=$(ip a | grep -F '10.' | awk '{print $2}' | awk -F/ '{print $1}' | grep -E '\b10.' | head -1)
-  if [ -n "$IP" ]; then
+  if [ -n "$IP" ]; 键，然后
     echo ""
     echo -e "\e[32m请用以下地址访问：\e[0m"
     echo -e "    \e[32m管理界面\e[0m： http://$IP:$PORT1/"
@@ -147,7 +147,7 @@ echo ""
 
 echo -e "\e[33m默认端口变更为4567\e[0m"
 
-if [ "$LOGS" = "true" ]; then
+if [ "$LOGS" = "true" ]; 键，然后
   echo ""
   docker logs -f xiaoya-tvbox
 fi
